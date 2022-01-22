@@ -41,4 +41,4 @@ async def on_message(message):
             await client.change_presence(status=discord.Status.idle, activity=game)
 
 
-client.run('OTM0Mjc5OTk2NTY0OTc5NzQy.YetyDQ.WzKTnGKsrj_yz1K5rIMHnmHB68s') #TOKEN 在剛剛 Discord Developer 那邊「BOT」頁面裡面
+client.run('input your token') #TOKEN 在剛剛 Discord Developer 那邊「BOT」頁面裡面
