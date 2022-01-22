@@ -1,5 +1,13 @@
 #導入 Discord.py
 import discord
+
+import configparser
+
+config = configparser.ConfigParser()
+# load INI 設定檔
+config.read('bot.ini')
+bot_token = config['discord-bot']['bot_token']
+
 #client 是我們與 Discord 連結的橋樑
 client = discord.Client()
 
@@ -41,4 +49,4 @@ async def on_message(message):
             await client.change_presence(status=discord.Status.idle, activity=game)
 
 
-client.run('input your token') #TOKEN 在剛剛 Discord Developer 那邊「BOT」頁面裡面
+client.run(bot_token) #TOKEN 在剛剛 Discord Developer 那邊「BOT」頁面裡面
